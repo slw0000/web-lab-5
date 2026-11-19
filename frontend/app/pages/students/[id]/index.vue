@@ -116,23 +116,4 @@ function displayValue(value: string | number | null | undefined): string {
     </section>
 </template>
 
-<style scoped>
-#student-full-name {
-    text-align: center;
-    margin-bottom: 1.25rem;
-    margin-top: 0;
-}
-
-#notes {
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-}
-
-dd {
-    margin-bottom: 1.25rem;
-}
-
-.loading-text {
-    text-align: center;
-}
-</style>
+<style scoped src="./student.css"></style>
