@@ -29,6 +29,7 @@ if (error.value?.statusCode === 404) {
     throw createError({
         statusCode: 404,
         statusMessage: 'Студент не найден',
+        fatal: true,
     });
 }
 
