@@ -12,4 +12,8 @@ export default defineNuxtConfig({
             studentsPageSize: 10,
         },
     },
+
+    nitro: {
+        preset: 'node-server',
+    },
 });
