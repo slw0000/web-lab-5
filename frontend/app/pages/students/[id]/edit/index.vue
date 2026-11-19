@@ -23,7 +23,10 @@ const { data: student, error } = await useAsyncData(studentKey, () =>
 );
 
 if (error.value) {
-    throw createError(error.value);
+    throw createError({
+        ...error.value,
+        fatal: true,
+    });
 }
 </script>
 

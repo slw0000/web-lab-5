@@ -52,14 +52,13 @@ mkdir -p backend/secrets
 
 В поле `k` вставить значение `JWT_SECRET_BASE64URL` из `backend/.env`.
 
-3. Собрать и запустить backend и БД:
+3. Собрать и запустить frontend, backend и БД:
 
 ```bash
-docker compose up -d --build db backend
+docker compose up --build
 ```
 
-Frontend пока запускается локально по инструкции ниже.
-Перенос сервера Nuxt в Docker ещё не завершён.
+Frontend доступен по адресу `http://localhost:2000`.
 
 Backend после запуска контейнера генерирует jOOQ-классы и разворачивает
 приложение в WildFly. Первый запуск может занять некоторое время.
@@ -82,7 +81,7 @@ docker compose down
 
 | Сервис     | Адрес                              |
 | ---------- | ---------------------------------- |
-| Фронтенд   | http://localhost:3000              |
+| Фронтенд   | http://localhost:2000              |
 | API        | http://localhost:8080/api          |
 | Swagger UI | http://localhost:8080/swagger.html |
 | OpenAPI    | http://localhost:8080/openapi      |
